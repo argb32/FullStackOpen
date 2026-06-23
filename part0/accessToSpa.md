@@ -4,16 +4,8 @@ sequenceDiagram
     participant Browser
     participant Server
 
-    User->>Browser: Writes new note on input and click save
-    Browser->>Server: "POST https://studies.cs.helsinki.fi/exampleapp/new_note"
-    
-    activate Server
-
-    Server-->>Browser: 302 response to redirect to /exampleapp/notes
-
-    deactivate Server
-
-    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    User->>Browser: Clicks to access Spa
+    Browser->>Server: "GET https://studies.cs.helsinki.fi/exampleapp/spa"
 
     activate Server
 
@@ -29,7 +21,7 @@ sequenceDiagram
 
     deactivate Server
 
-    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    Browser->>Server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
 
     activate Server
 
@@ -44,7 +36,5 @@ sequenceDiagram
     Server-->>Browser: Sends JSON file
 
     deactivate Server
-
-    Browser->>Browser: Reloads notes
 
 ```
