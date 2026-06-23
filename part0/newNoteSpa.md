@@ -11,6 +11,10 @@ sequenceDiagram
 
     Server-->>Browser: Sends new note content in a JSON
 
+<<<<<<< HEAD
     Browser->>Browser: Render the new note without reloading the page
+=======
+    Browser->Browser: Render the new note without reloading the page
+>>>>>>> ea09017ad702c8a2412dedcb47e0860506cd5ae6
 ```
    
